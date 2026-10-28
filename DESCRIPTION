@@ -1,0 +1,29 @@
+Package: kobocheck
+Title: Automated Cleaning Logs for KoboToolbox Data
+Version: 0.2.0
+Authors@R: person("Jubilio", "Mausse", email = "jubiliomausse5@gmail.com", role = c("aut", "cre"))
+Description: Reads a KoboToolbox data export, its XLSForm and optional audit
+    files, and produces a reviewer-ready cleaning log. Skip-logic and constraint
+    checks are derived automatically from the XLSForm 'relevant' and 'constraint'
+    columns. Other checks cover survey duration, duplicates and near-duplicates,
+    numeric outliers, 'other' responses, choice-list consistency and
+    select_multiple consistency, plus custom logical checks written in XLSForm
+    syntax. Includes a Shiny app for users who do not code in R.
+License: MIT + file LICENSE
+URL: https://github.com/Jubilio/kobocheck
+BugReports: https://github.com/Jubilio/kobocheck/issues
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+    readxl,
+    openxlsx,
+    utils,
+    stats
+Suggests:
+    shiny,
+    bslib,
+    DT,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
